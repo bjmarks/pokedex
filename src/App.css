@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.battery__light {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: solid black 1px;
+  opacity: .8;
+}
+.red  {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.active {
+  animation:infinite blink 2500ms ease-in-out;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
