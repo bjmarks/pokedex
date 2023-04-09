@@ -6,6 +6,7 @@ function App() {
   const [currentPokemonId, setCurrentPokemonId] = useState(1);
   const [pokemon, setPokemon] = useState([]);
   const [currentPokemon, setCurrentPokemon] = useState(`https://pokeapi.co/api/v2/pokemon/${currentPokemonId}`);
+  const increment = () => {setCurrentPokemonId(currentPokemonId + 1)}
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true)
