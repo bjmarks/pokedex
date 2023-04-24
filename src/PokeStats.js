@@ -1,6 +1,6 @@
 import React from 'react'
 export default function PokeStats({ pokemon }) {
-  console.log(pokemon)
+//   console.log(pokemon)
   return (
     <div className="stat_container">
         <div className="types" id="types">
