@@ -11,6 +11,16 @@ body {
     align-items: center;
     height: 100vh;
 }
+.description {
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin: auto;
+    width: 80%;
+    visibility: hidden;
+    display: none;
+}
 .pokedex {
     width: 22rem;
     height: 35rem;
@@ -63,7 +73,7 @@ body {
 }
 .image-placeholder {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .pokeImg {
     width: 300px;
