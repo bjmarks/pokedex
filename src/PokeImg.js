@@ -2,13 +2,21 @@ export default function pokeImg({ pokemon }) {
   const consl = async () => {
     const descrip = document.getElementById("desc");
     const img = document.getElementById("pokeImg");
+    let arr = [];
     img.style.visibility = "hidden";
     img.style.display = "none";
     await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`).then(res => res.json()).then(data => { 
       let x = data.flavor_text_entries;
+      if(x.length === 0) {
+        let text = "this pokemon has no Description as of yet";
+          descrip.style.display = "flex";
+          descrip.style.visibility = "visible";
+          descrip.innerHTML = text;
+      }
       for(let i = 0; i < x.length; i++) {
-        if(x[i]?.version.name === "red") {
-          let text = x[i].flavor_text.replaceAll("\n", " ").replaceAll("\f", " ");
+        if(x[i]?.language.url === "https://pokeapi.co/api/v2/language/9/") {
+          arr.push(x[i]);
+          let text = arr[0].flavor_text.replaceAll("\n", " ").replaceAll("\f", " ");
           // console.log(text)
           descrip.style.display = "flex";
           descrip.style.visibility = "visible";
