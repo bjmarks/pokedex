@@ -7,7 +7,7 @@ export default function PokeSearch({ pokemon, pokeS, cpi }) {
   }
   const handleName = (event) => {
     if (event.key === 'Enter') {
-      pokeS(event.target.value);
+      pokeS(event.target.value.toLowerCase());
     }
   }
   return (
